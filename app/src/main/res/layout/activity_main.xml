@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ffff281a">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomAsig"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomProf"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:textSize="18sp"
+        android:textColor="#ffffffff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/asigText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:hint="@string/hintAsig" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/profText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/hintProf" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strLimpiar"
+        android:id="@+id/btnLimpiar"
+        android:layout_alignTop="@+id/btnAñadir"
+        android:layout_alignRight="@+id/iniTime"
+        android:layout_alignEnd="@+id/iniTime" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strAñadir"
+        android:id="@+id/btnAñadir"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtHorario"
+        android:id="@+id/textView"
+        android:layout_marginTop="31dp"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:layout_below="@+id/profText"
+        android:layout_centerHorizontal="true" />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iniTime"
+        android:timePickerMode="spinner"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView"
+        />
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finTime"
+        android:timePickerMode="spinner"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Dias"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/iniTime"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strLun"
+        android:id="@+id/checkLun"
+        android:layout_below="@+id/textView4"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strMar"
+        android:id="@+id/checkMar"
+        android:layout_below="@+id/checkLun"
+        android:layout_alignLeft="@+id/checkLun"
+        android:layout_alignStart="@+id/checkLun"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strMier"
+        android:id="@+id/checkMier"
+        android:layout_below="@+id/checkMar"
+        android:layout_alignLeft="@+id/checkMar"
+        android:layout_alignStart="@+id/checkMar"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strJue"
+        android:id="@+id/checkJue"
+        android:layout_above="@+id/checkVie"
+        android:layout_alignRight="@+id/profText"
+        android:layout_alignEnd="@+id/profText"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strVie"
+        android:id="@+id/checkVie"
+        android:layout_above="@+id/checkMier"
+        android:layout_alignLeft="@+id/checkJue"
+        android:layout_alignStart="@+id/checkJue"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strSab"
+        android:id="@+id/checkSab"
+        android:layout_alignTop="@+id/checkMier"
+        android:layout_alignLeft="@+id/checkVie"
+        android:layout_alignStart="@+id/checkVie"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:id="@+id/textView5"
+        android:textSize="30sp"
+        android:textColor="#ffffffff"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
+
+</RelativeLayout>
